@@ -8,7 +8,7 @@ router.route('/create')
 .post(adminController.createAdmin);
 
 router.route('/login')
-.post(adminController.loginAdmin);
+.post( adminController.loginAdmin);
 
 router.route('/add-product')
 .post(userMiddleware.authorizeUser, userMiddleware.adminChecker, adminController.createProduct);

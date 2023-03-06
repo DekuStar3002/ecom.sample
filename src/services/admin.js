@@ -30,7 +30,8 @@ const loginAdmin = async ({ email, password }) => {
   }
 };
 
-const createProduct = async ({ name, user_id }) => {
+const createProduct = async (name, user_id) => {
+  console.log(user_id);
   return Product.create({ name: name, user_id: user_id });
 }
 

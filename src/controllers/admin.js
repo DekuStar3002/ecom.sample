@@ -30,7 +30,6 @@ const loginAdmin = async (req, res) => {
 const createProduct = async (req, res) => {
   try {
     const nameOfProduct = req.body.name;
-    console.log(req.body);
     const userId = req.userData.id;
     const newProduct = await adminService.createProduct(nameOfProduct, userId);
     res.status(200).json({
