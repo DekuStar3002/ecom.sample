@@ -10,14 +10,11 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Cart.hasOne(models.User, {
-        foreignKey: 'cart_id',
-        as: 'cart'
-      })
     }
   }
   Cart.init({
-    product_list: DataTypes.ARRAY(DataTypes.INTEGER)
+    product_list: DataTypes.ARRAY(DataTypes.INTEGER),
+    user_id: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Cart',

@@ -13,6 +13,10 @@ module.exports = {
         type: Sequelize.ARRAY(Sequelize.INTEGER),
         defaultValue: []
       },
+      user_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

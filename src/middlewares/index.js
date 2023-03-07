@@ -1,2 +1,3 @@
 const userMiddleware = require('./userMiddleware');
-module.exports = { userMiddleware };
+const validateUser = require('./validationMiddleware');
+module.exports = { userMiddleware, validateUser };
