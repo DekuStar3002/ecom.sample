@@ -25,6 +25,7 @@ const validateUser = async (req, res, next) => {
     req.userData = response.data.data;
     next();
   } catch (error) {
+    console.log(error);
     res.status(error.response.status).json({
       error: error.response.userData
     });
